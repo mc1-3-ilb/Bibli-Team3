@@ -14,7 +14,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AA0E8592282BCB7000316C03 /* mvc-team3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mvc-team3.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA0E8592282BCB7000316C03 /* mvvm-team03.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mvvm-team03.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA0E8595282BCB7000316C03 /* mvc_team3App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mvc_team3App.swift; sourceTree = "<group>"; };
 		AA0E8597282BCB7000316C03 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AA0E8599282BCB7100316C03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -43,7 +43,7 @@
 		AA0E8593282BCB7000316C03 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AA0E8592282BCB7000316C03 /* mvc-team3.app */,
+				AA0E8592282BCB7000316C03 /* mvvm-team03.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -51,6 +51,9 @@
 		AA0E8594282BCB7000316C03 /* mvc-team3 */ = {
 			isa = PBXGroup;
 			children = (
+				AA0E85A5282BCDB300316C03 /* ViewModels */,
+				AA0E85A4282BCDA000316C03 /* Views */,
+				AA0E85A3282BCD9200316C03 /* Models */,
 				AA0E8595282BCB7000316C03 /* mvc_team3App.swift */,
 				AA0E8597282BCB7000316C03 /* ContentView.swift */,
 				AA0E8599282BCB7100316C03 /* Assets.xcassets */,
@@ -67,12 +70,33 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		AA0E85A3282BCD9200316C03 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AA0E85A4282BCDA000316C03 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AA0E85A5282BCDB300316C03 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AA0E8591282BCB7000316C03 /* mvc-team3 */ = {
+		AA0E8591282BCB7000316C03 /* mvvm-team03 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AA0E85A0282BCB7100316C03 /* Build configuration list for PBXNativeTarget "mvc-team3" */;
+			buildConfigurationList = AA0E85A0282BCB7100316C03 /* Build configuration list for PBXNativeTarget "mvvm-team03" */;
 			buildPhases = (
 				AA0E858E282BCB7000316C03 /* Sources */,
 				AA0E858F282BCB7000316C03 /* Frameworks */,
@@ -82,9 +106,9 @@
 			);
 			dependencies = (
 			);
-			name = "mvc-team3";
+			name = "mvvm-team03";
 			productName = "mvc-team3";
-			productReference = AA0E8592282BCB7000316C03 /* mvc-team3.app */;
+			productReference = AA0E8592282BCB7000316C03 /* mvvm-team03.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -102,7 +126,7 @@
 					};
 				};
 			};
-			buildConfigurationList = AA0E858D282BCB7000316C03 /* Build configuration list for PBXProject "mvc-team3" */;
+			buildConfigurationList = AA0E858D282BCB7000316C03 /* Build configuration list for PBXProject "mvvm-team03" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -115,7 +139,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AA0E8591282BCB7000316C03 /* mvc-team3 */,
+				AA0E8591282BCB7000316C03 /* mvvm-team03 */,
 			);
 		};
 /* End PBXProject section */
@@ -318,7 +342,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AA0E858D282BCB7000316C03 /* Build configuration list for PBXProject "mvc-team3" */ = {
+		AA0E858D282BCB7000316C03 /* Build configuration list for PBXProject "mvvm-team03" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AA0E859E282BCB7100316C03 /* Debug */,
@@ -327,7 +351,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AA0E85A0282BCB7100316C03 /* Build configuration list for PBXNativeTarget "mvc-team3" */ = {
+		AA0E85A0282BCB7100316C03 /* Build configuration list for PBXNativeTarget "mvvm-team03" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AA0E85A1282BCB7100316C03 /* Debug */,
