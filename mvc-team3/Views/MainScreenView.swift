@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct MainScreenView: View {
     @State private var showingSheet = false
     @State private var searchText = ""
     var body: some View {
@@ -34,8 +34,9 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct MainScreenView_Preview: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        MainScreenView()
     }
 }
+

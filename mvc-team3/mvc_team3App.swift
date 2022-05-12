@@ -11,7 +11,7 @@ import SwiftUI
 struct mvc_team3App: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainScreenView()
         }
     }
 }
