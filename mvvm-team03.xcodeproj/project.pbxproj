@@ -11,6 +11,11 @@
 		AA0E8598282BCB7000316C03 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0E8597282BCB7000316C03 /* ContentView.swift */; };
 		AA0E859A282BCB7100316C03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA0E8599282BCB7100316C03 /* Assets.xcassets */; };
 		AA0E859D282BCB7100316C03 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA0E859C282BCB7100316C03 /* Preview Assets.xcassets */; };
+		FB380AE6282E593700CED06B /* FirstOnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB380AE5282E593700CED06B /* FirstOnBoardingView.swift */; };
+		FB380AE8282E660F00CED06B /* SecondOnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB380AE7282E660F00CED06B /* SecondOnBoardingView.swift */; };
+		FBB74E50282CE417003D9B1F /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB74E4F282CE417003D9B1F /* MainScreenView.swift */; };
+		FBB74E52282CE55E003D9B1F /* AddBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB74E51282CE55E003D9B1F /* AddBookView.swift */; };
+		FBB74E55282CF0B3003D9B1F /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBB74E54282CF0B3003D9B1F /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +24,12 @@
 		AA0E8597282BCB7000316C03 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AA0E8599282BCB7100316C03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA0E859C282BCB7100316C03 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FB380AE5282E593700CED06B /* FirstOnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstOnBoardingView.swift; sourceTree = "<group>"; };
+		FB380AE7282E660F00CED06B /* SecondOnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondOnBoardingView.swift; sourceTree = "<group>"; };
+		FBB74E4F282CE417003D9B1F /* MainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
+		FBB74E51282CE55E003D9B1F /* AddBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookView.swift; sourceTree = "<group>"; };
+		FBB74E53282CE6B2003D9B1F /* mvvm-team03-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "mvvm-team03-Info.plist"; sourceTree = "<group>"; };
+		FBB74E54282CF0B3003D9B1F /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +46,7 @@
 		AA0E8589282BCB7000316C03 = {
 			isa = PBXGroup;
 			children = (
+				FBB74E53282CE6B2003D9B1F /* mvvm-team03-Info.plist */,
 				AA0E8594282BCB7000316C03 /* mvc-team3 */,
 				AA0E8593282BCB7000316C03 /* Products */,
 			);
@@ -51,9 +63,7 @@
 		AA0E8594282BCB7000316C03 /* mvc-team3 */ = {
 			isa = PBXGroup;
 			children = (
-				AA0E85A5282BCDB300316C03 /* ViewModels */,
-				AA0E85A4282BCDA000316C03 /* Views */,
-				AA0E85A3282BCD9200316C03 /* Models */,
+				FBB74E4E282CE3F6003D9B1F /* Views */,
 				AA0E8595282BCB7000316C03 /* mvc_team3App.swift */,
 				AA0E8597282BCB7000316C03 /* ContentView.swift */,
 				AA0E8599282BCB7100316C03 /* Assets.xcassets */,
@@ -70,25 +80,16 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		AA0E85A3282BCD9200316C03 /* Models */ = {
+		FBB74E4E282CE3F6003D9B1F /* Views */ = {
 			isa = PBXGroup;
 			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		AA0E85A4282BCDA000316C03 /* Views */ = {
-			isa = PBXGroup;
-			children = (
+				FBB74E4F282CE417003D9B1F /* MainScreenView.swift */,
+				FBB74E51282CE55E003D9B1F /* AddBookView.swift */,
+				FBB74E54282CF0B3003D9B1F /* Launch Screen.storyboard */,
+				FB380AE5282E593700CED06B /* FirstOnBoardingView.swift */,
+				FB380AE7282E660F00CED06B /* SecondOnBoardingView.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		AA0E85A5282BCDB300316C03 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +150,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBB74E55282CF0B3003D9B1F /* Launch Screen.storyboard in Resources */,
 				AA0E859D282BCB7100316C03 /* Preview Assets.xcassets in Resources */,
 				AA0E859A282BCB7100316C03 /* Assets.xcassets in Resources */,
 			);
@@ -163,6 +165,10 @@
 			files = (
 				AA0E8598282BCB7000316C03 /* ContentView.swift in Sources */,
 				AA0E8596282BCB7000316C03 /* mvc_team3App.swift in Sources */,
+				FBB74E50282CE417003D9B1F /* MainScreenView.swift in Sources */,
+				FB380AE6282E593700CED06B /* FirstOnBoardingView.swift in Sources */,
+				FBB74E52282CE55E003D9B1F /* AddBookView.swift in Sources */,
+				FB380AE8282E660F00CED06B /* SecondOnBoardingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,9 +299,12 @@
 				DEVELOPMENT_ASSET_PATHS = "\"mvc-team3/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "mvvm-team03-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Bibli;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -321,9 +330,12 @@
 				DEVELOPMENT_ASSET_PATHS = "\"mvc-team3/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "mvvm-team03-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Bibli;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
