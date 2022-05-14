@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  MC1-SCREENTEST
-//
-//  Created by Nadia Ramadhani on 11/05/22.
-//
-
 import SwiftUI
 
 struct MainScreenView: View {
@@ -26,6 +19,7 @@ struct MainScreenView: View {
                     Text("Tap + to add new book folder")
                 }
                 else{
+                    
                     ScrollView(.vertical){
                         LazyVGrid(columns: layout, content: {
                             ForEach(items, id: \.self){ item in
@@ -33,7 +27,7 @@ struct MainScreenView: View {
                                     VStack {
                                         Image("bookSmall")
                                             .resizable()
-                                            .frame(width: 110, height: 140)
+                                            .frame(width: 100, height: 130)
                                         Text(item).bold().foregroundColor(.black)
                                             .font(.caption)
                                             .padding(.horizontal)
@@ -43,9 +37,10 @@ struct MainScreenView: View {
                                 }
                             }
                         })
-                    }
+                    }.padding(.vertical,10)
                 }
-            }.searchable(text: $searchText, prompt: "Looking for book folder?")
+            }
+            .searchable(text: $searchText, prompt: "Looking for book folder?")
         }
         .background(
             Image("background")
@@ -54,9 +49,9 @@ struct MainScreenView: View {
                 .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
             //UIScreen.main.bounds.height)
         )
-        
         .navigationTitle("Book Shelves")
         .foregroundColor(Color("AccentColor"))
+        .navigationBarBackButtonHidden(true)
         .navigationBarItems(trailing: Button(action: {
             print("back")
             showingSheet.toggle()
@@ -70,13 +65,6 @@ struct MainScreenView: View {
                 
     }
 }
-
-struct InsideBookView: View{
-    var body: some View {
-        Text("OK")
-    }
-}
-
 
 struct MainScreenView_Preview: PreviewProvider {
     static var previews: some View {
