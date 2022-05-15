@@ -3,14 +3,13 @@ import SwiftUI
 struct MainScreenView: View {
     @State private var showingSheet = false
     @State private var searchText = ""
+    @StateObject var vm = BookFolderViewModel()
     //contoh dulu
-    var data: Int = 3
-    let items = Array(1...5).map({"\($0) Avatar : The Legend of Aang"})
-    
+    var data: Int = 1
+    //------
     let layout = [
         GridItem(.adaptive(minimum:150))
     ]
-    //------
     
     var body: some View {
         HStack{
@@ -22,13 +21,13 @@ struct MainScreenView: View {
                     
                     ScrollView(.vertical){
                         LazyVGrid(columns: layout, content: {
-                            ForEach(items, id: \.self){ item in
+                            ForEach(vm.savedEntities) { entity in
                                 NavigationLink(destination: InsideBookView()){
                                     VStack {
-                                        Image("bookSmall")
+                                        Image("book")
                                             .resizable()
                                             .frame(width: 100, height: 130)
-                                        Text(item).bold().foregroundColor(.black)
+                                        Text(entity.titleBook ?? "-").bold().foregroundColor(.black)
                                             .font(.caption)
                                             .padding(.horizontal)
                                         Text("12 items").foregroundColor(.secondary).font(.caption2)
