@@ -33,7 +33,7 @@ struct FirstOnBoardingView: View {
                     .padding(.vertical)
                 
                 NavigationLink(destination: SecondOnBoardingView()){
-                    Text("Continue")
+                    Text("Start")   //di screen pertama harusnya tombol apa ya?
                 }
                 .font(.title2)
                 .frame(width: 250, height: 25, alignment: .center)
