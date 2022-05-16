@@ -98,9 +98,7 @@ struct SecondOnBoardingView: View {
             .background(Color("AccentColor"))
             .cornerRadius(10)
             .padding(.bottom,200)
-            
-            
-            
+        
         }
     }
     
