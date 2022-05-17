@@ -2,7 +2,7 @@ import SwiftUI
 
 
 struct AddBookView: View {
-    @StateObject var vm = BookFolderViewModel()
+    @StateObject var bookvm = BookFolderViewModel()
     @State private var titleBook:String = ""
     @State private var authorBook:String = ""
     
@@ -39,7 +39,7 @@ struct AddBookView: View {
         }, trailing: Button(action:{
             print("save")
             guard !titleBook.isEmpty && !authorBook.isEmpty else { return }
-            vm.addBook(title: titleBook, author: authorBook)
+            bookvm.addBook(title: titleBook, author: authorBook)
             titleBook = ""
             authorBook = ""
             dismiss()

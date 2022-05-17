@@ -26,7 +26,7 @@ struct MainScreenView: View {
                                     VStack {
                                         Image("book")
                                             .resizable()
-                                            .frame(width: 100, height: 130)
+                                            .frame(width: 67, height: 81)
                                         Text(entity.titleBook ?? "-").bold().foregroundColor(.black)
                                             .font(.caption)
                                             .padding(.horizontal)
