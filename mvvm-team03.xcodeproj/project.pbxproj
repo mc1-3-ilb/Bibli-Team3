@@ -19,6 +19,12 @@
 		FBB74E50282CE417003D9B1F /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB74E4F282CE417003D9B1F /* MainScreenView.swift */; };
 		FBB74E52282CE55E003D9B1F /* AddBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB74E51282CE55E003D9B1F /* AddBookView.swift */; };
 		FBB74E55282CF0B3003D9B1F /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBB74E54282CF0B3003D9B1F /* Launch Screen.storyboard */; };
+		FBBD36772832750100823C33 /* TakeImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBD36762832750100823C33 /* TakeImageView.swift */; };
+		FBBD36792832752000823C33 /* ImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBD36782832752000823C33 /* ImageViewModel.swift */; };
+		FBBD367B2832754600823C33 /* PickerImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBD367A2832754600823C33 /* PickerImage.swift */; };
+		FBBD367E2832759100823C33 /* ImagePickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBD367D2832759100823C33 /* ImagePickerVC.swift */; };
+		FBBD3680283275B000823C33 /* ZoomableScrollvIEW.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBD367F283275B000823C33 /* ZoomableScrollvIEW.swift */; };
+		FBBD3683283275E900823C33 /* FileManager+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBD3682283275E900823C33 /* FileManager+Extensions.swift */; };
 		FBC64016283000DF00685A32 /* NoteTakeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC64015283000DF00685A32 /* NoteTakeView.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +43,12 @@
 		FBB74E51282CE55E003D9B1F /* AddBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookView.swift; sourceTree = "<group>"; };
 		FBB74E53282CE6B2003D9B1F /* mvvm-team03-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "mvvm-team03-Info.plist"; sourceTree = "<group>"; };
 		FBB74E54282CF0B3003D9B1F /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		FBBD36762832750100823C33 /* TakeImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeImageView.swift; sourceTree = "<group>"; };
+		FBBD36782832752000823C33 /* ImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewModel.swift; sourceTree = "<group>"; };
+		FBBD367A2832754600823C33 /* PickerImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerImage.swift; sourceTree = "<group>"; };
+		FBBD367D2832759100823C33 /* ImagePickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerVC.swift; sourceTree = "<group>"; };
+		FBBD367F283275B000823C33 /* ZoomableScrollvIEW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomableScrollvIEW.swift; sourceTree = "<group>"; };
+		FBBD3682283275E900823C33 /* FileManager+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Extensions.swift"; sourceTree = "<group>"; };
 		FBC64015283000DF00685A32 /* NoteTakeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTakeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -54,6 +66,8 @@
 		AA0E8589282BCB7000316C03 = {
 			isa = PBXGroup;
 			children = (
+				FBBD3681283275D000823C33 /* Extensions */,
+				FBBD367C2832756F00823C33 /* UIViewRepresentable */,
 				FBB74E53282CE6B2003D9B1F /* mvvm-team03-Info.plist */,
 				AA0E8594282BCB7000316C03 /* mvc-team3 */,
 				AA0E8593282BCB7000316C03 /* Products */,
@@ -94,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				BD803E88282F8D7500BB1175 /* BookContainer.xcdatamodeld */,
+				FBBD367A2832754600823C33 /* PickerImage.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -102,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				BD803E9028300B7000BB1175 /* BookFolderViewModel.swift */,
+				FBBD36782832752000823C33 /* ImageViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -116,8 +132,26 @@
 				FB380AE5282E593700CED06B /* FirstOnBoardingView.swift */,
 				FB380AE7282E660F00CED06B /* SecondOnBoardingView.swift */,
 				FBC64015283000DF00685A32 /* NoteTakeView.swift */,
+				FBBD36762832750100823C33 /* TakeImageView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		FBBD367C2832756F00823C33 /* UIViewRepresentable */ = {
+			isa = PBXGroup;
+			children = (
+				FBBD367D2832759100823C33 /* ImagePickerVC.swift */,
+				FBBD367F283275B000823C33 /* ZoomableScrollvIEW.swift */,
+			);
+			path = UIViewRepresentable;
+			sourceTree = "<group>";
+		};
+		FBBD3681283275D000823C33 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FBBD3682283275E900823C33 /* FileManager+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,15 +226,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD803E8A282F8D7500BB1175 /* BookContainer.xcdatamodeld in Sources */,
+				FBBD367B2832754600823C33 /* PickerImage.swift in Sources */,
 				AA0E8598282BCB7000316C03 /* ContentView.swift in Sources */,
 				FBC64016283000DF00685A32 /* NoteTakeView.swift in Sources */,
 				AA0E8596282BCB7000316C03 /* mvc_team3App.swift in Sources */,
+				FBBD3680283275B000823C33 /* ZoomableScrollvIEW.swift in Sources */,
 				FBB74E50282CE417003D9B1F /* MainScreenView.swift in Sources */,
+				FBBD367E2832759100823C33 /* ImagePickerVC.swift in Sources */,
 				FB380AE6282E593700CED06B /* FirstOnBoardingView.swift in Sources */,
+				FBBD36792832752000823C33 /* ImageViewModel.swift in Sources */,
 				BD803E9128300B7000BB1175 /* BookFolderViewModel.swift in Sources */,
 				FBB74E52282CE55E003D9B1F /* AddBookView.swift in Sources */,
 				FB380AE8282E660F00CED06B /* SecondOnBoardingView.swift in Sources */,
+				FBBD3683283275E900823C33 /* FileManager+Extensions.swift in Sources */,
 				BD803E84282EB9E600BB1175 /* InsideBookView.swift in Sources */,
+				FBBD36772832750100823C33 /* TakeImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,11 +369,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"mvc-team3/Preview Content\"";
+				DEVELOPMENT_TEAM = DZ5KY3PP54;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "mvvm-team03-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = Bibli;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Permission Buat akses kamera";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Permission Buat akses album photo";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
@@ -344,7 +387,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "none.mvc-team3";
+				PRODUCT_BUNDLE_IDENTIFIER = non;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -360,11 +403,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"mvc-team3/Preview Content\"";
+				DEVELOPMENT_TEAM = DZ5KY3PP54;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "mvvm-team03-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = Bibli;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Permission Buat akses kamera";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Permission Buat akses album photo";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
@@ -375,7 +421,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "none.mvc-team3";
+				PRODUCT_BUNDLE_IDENTIFIER = non;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

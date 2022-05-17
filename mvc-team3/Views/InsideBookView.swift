@@ -5,7 +5,11 @@ struct InsideBookView: View {
     @State private var searchText = ""
     @State private var showingOptions = false
     @State private var navigationLinkNotes = false
-  
+    @State private var navigationLinkImage = false
+    @State private var navigationLinkVoice = false
+    //@EnvironmentObject  var vm: ImageViewModel
+
+
 
     //contoh dulu
     var data: Int = 0
@@ -21,6 +25,15 @@ struct InsideBookView: View {
                   NavigationLink(destination: NoteTakeView(), isActive: $navigationLinkNotes) {
                     EmptyView()
                 }
+                NavigationLink(destination: TakeImageView()
+                               .environmentObject(ImageViewModel())
+                               .onAppear {
+                                   UserDefaults.standard.setValue(false, forKey: "_UIConstraintBasedLayoutLogUnsatisfiable")
+                               }
+,
+                               isActive: $navigationLinkImage) {
+                  EmptyView()
+              }
          
                 VStack{
                     if(data==0){
@@ -57,8 +70,13 @@ struct InsideBookView: View {
                                     navigationLinkNotes = true}
                             }),
 
-                            .default(Text("Voice Notes"), action: {print ("tapped")
+                            .default(Text("Voice Notes"), action:
+                                        {
+                                withAnimation{
+
+                                navigationLinkImage = true}
                             }),
+                            
                             
                             .default(Text("Take photo"), action: {print ("tapped")
                             }),
@@ -82,6 +100,6 @@ struct InsideBookView: View {
 
 struct InsideBookView_Preview: PreviewProvider {
     static var previews: some View {
-        InsideBookView()
+        InsideBookView().environmentObject(ImageViewModel())
     }
 }
