@@ -1,9 +1,3 @@
-//
-//  FirstOnBoardingView.swift
-//  mvvm-team03
-//
-//  Created by Nadia Ramadhani on 13/05/22.
-//
 
 import SwiftUI
 
@@ -15,10 +9,10 @@ struct FirstOnBoardingView: View {
         
         NavigationView {
             VStack{
-                Image ("logoNew")
+                Image ("logoOnboarding")
                     .resizable()
-                    .frame(width: 300, height: 300, alignment: .center)
-                    .padding(.bottom)
+                    .frame(width: 214, height: 214, alignment: .center)
+                    .padding(.bottom,100)
                 
                 Text("**Welcome to Bibli**")
                     .font(.title)
@@ -33,7 +27,8 @@ struct FirstOnBoardingView: View {
                     .padding(.vertical)
                 
                 NavigationLink(destination: SecondOnBoardingView()){
-                    Text("Start")   //di screen pertama harusnya tombol apa ya?
+                    Text("Start")
+                    
                 }
                 .font(.title2)
                 .frame(width: 250, height: 25, alignment: .center)
@@ -44,20 +39,15 @@ struct FirstOnBoardingView: View {
                 .padding(.top,75)
                 
                 Spacer()
-                
-                
-                
+              
             }
         }.navigationViewStyle(.stack)
         
     }
     
 }
-
-
 struct FirstOnBoardingView_Preview: PreviewProvider {
     static var previews: some View {
         FirstOnBoardingView()
     }
 }
-

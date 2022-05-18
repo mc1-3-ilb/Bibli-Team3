@@ -26,6 +26,14 @@
 		FBBD3680283275B000823C33 /* ZoomableScrollvIEW.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBD367F283275B000823C33 /* ZoomableScrollvIEW.swift */; };
 		FBBD3683283275E900823C33 /* FileManager+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBD3682283275E900823C33 /* FileManager+Extensions.swift */; };
 		FBC64016283000DF00685A32 /* NoteTakeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC64015283000DF00685A32 /* NoteTakeView.swift */; };
+		FBE6F32F2835473B000D7460 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE6F32E2835473B000D7460 /* BaseModel.swift */; };
+		FBE6F3322835479C000D7460 /* NoteCoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE6F3312835479C000D7460 /* NoteCoreDataManager.swift */; };
+		FBE6F334283547C7000D7460 /* Note+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE6F333283547C7000D7460 /* Note+Extension.swift */; };
+		FBE6F33728354808000D7460 /* NoteDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FBE6F33528354808000D7460 /* NoteDataModel.xcdatamodeld */; };
+		FBE6F33928354859000D7460 /* NoteListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE6F33828354859000D7460 /* NoteListViewModel.swift */; };
+		FBE6F33B2835488C000D7460 /* TakeNoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE6F33A2835488C000D7460 /* TakeNoteViewModel.swift */; };
+		FBE6F33D28354968000D7460 /* NoteListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE6F33C28354968000D7460 /* NoteListView.swift */; };
+		FBE6F33F28354986000D7460 /* NoteOpenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE6F33E28354986000D7460 /* NoteOpenView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +58,14 @@
 		FBBD367F283275B000823C33 /* ZoomableScrollvIEW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomableScrollvIEW.swift; sourceTree = "<group>"; };
 		FBBD3682283275E900823C33 /* FileManager+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Extensions.swift"; sourceTree = "<group>"; };
 		FBC64015283000DF00685A32 /* NoteTakeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTakeView.swift; sourceTree = "<group>"; };
+		FBE6F32E2835473B000D7460 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		FBE6F3312835479C000D7460 /* NoteCoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCoreDataManager.swift; sourceTree = "<group>"; };
+		FBE6F333283547C7000D7460 /* Note+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+Extension.swift"; sourceTree = "<group>"; };
+		FBE6F33628354808000D7460 /* NoteDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NoteDataModel.xcdatamodel; sourceTree = "<group>"; };
+		FBE6F33828354859000D7460 /* NoteListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListViewModel.swift; sourceTree = "<group>"; };
+		FBE6F33A2835488C000D7460 /* TakeNoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeNoteViewModel.swift; sourceTree = "<group>"; };
+		FBE6F33C28354968000D7460 /* NoteListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListView.swift; sourceTree = "<group>"; };
+		FBE6F33E28354986000D7460 /* NoteOpenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteOpenView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +82,8 @@
 		AA0E8589282BCB7000316C03 = {
 			isa = PBXGroup;
 			children = (
+				FBE6F3302835477A000D7460 /* Core Data Manager */,
+				FBE6F32D28354725000D7460 /* BaseModel */,
 				FBBD3681283275D000823C33 /* Extensions */,
 				FBBD367C2832756F00823C33 /* UIViewRepresentable */,
 				FBB74E53282CE6B2003D9B1F /* mvvm-team03-Info.plist */,
@@ -107,6 +125,7 @@
 		BD803E87282F8D3A00BB1175 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FBE6F33528354808000D7460 /* NoteDataModel.xcdatamodeld */,
 				BD803E88282F8D7500BB1175 /* BookContainer.xcdatamodeld */,
 				FBBD367A2832754600823C33 /* PickerImage.swift */,
 			);
@@ -118,6 +137,8 @@
 			children = (
 				BD803E9028300B7000BB1175 /* BookFolderViewModel.swift */,
 				FBBD36782832752000823C33 /* ImageViewModel.swift */,
+				FBE6F33828354859000D7460 /* NoteListViewModel.swift */,
+				FBE6F33A2835488C000D7460 /* TakeNoteViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -133,6 +154,8 @@
 				FB380AE7282E660F00CED06B /* SecondOnBoardingView.swift */,
 				FBC64015283000DF00685A32 /* NoteTakeView.swift */,
 				FBBD36762832750100823C33 /* TakeImageView.swift */,
+				FBE6F33C28354968000D7460 /* NoteListView.swift */,
+				FBE6F33E28354986000D7460 /* NoteOpenView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -150,8 +173,25 @@
 			isa = PBXGroup;
 			children = (
 				FBBD3682283275E900823C33 /* FileManager+Extensions.swift */,
+				FBE6F333283547C7000D7460 /* Note+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FBE6F32D28354725000D7460 /* BaseModel */ = {
+			isa = PBXGroup;
+			children = (
+				FBE6F32E2835473B000D7460 /* BaseModel.swift */,
+			);
+			path = BaseModel;
+			sourceTree = "<group>";
+		};
+		FBE6F3302835477A000D7460 /* Core Data Manager */ = {
+			isa = PBXGroup;
+			children = (
+				FBE6F3312835479C000D7460 /* NoteCoreDataManager.swift */,
+			);
+			path = "Core Data Manager";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,10 +265,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBE6F3322835479C000D7460 /* NoteCoreDataManager.swift in Sources */,
+				FBE6F33B2835488C000D7460 /* TakeNoteViewModel.swift in Sources */,
+				FBE6F33D28354968000D7460 /* NoteListView.swift in Sources */,
 				BD803E8A282F8D7500BB1175 /* BookContainer.xcdatamodeld in Sources */,
 				FBBD367B2832754600823C33 /* PickerImage.swift in Sources */,
 				AA0E8598282BCB7000316C03 /* ContentView.swift in Sources */,
 				FBC64016283000DF00685A32 /* NoteTakeView.swift in Sources */,
+				FBE6F33928354859000D7460 /* NoteListViewModel.swift in Sources */,
+				FBE6F33F28354986000D7460 /* NoteOpenView.swift in Sources */,
 				AA0E8596282BCB7000316C03 /* mvc_team3App.swift in Sources */,
 				FBBD3680283275B000823C33 /* ZoomableScrollvIEW.swift in Sources */,
 				FBB74E50282CE417003D9B1F /* MainScreenView.swift in Sources */,
@@ -236,11 +281,14 @@
 				FB380AE6282E593700CED06B /* FirstOnBoardingView.swift in Sources */,
 				FBBD36792832752000823C33 /* ImageViewModel.swift in Sources */,
 				BD803E9128300B7000BB1175 /* BookFolderViewModel.swift in Sources */,
+				FBE6F32F2835473B000D7460 /* BaseModel.swift in Sources */,
 				FBB74E52282CE55E003D9B1F /* AddBookView.swift in Sources */,
+				FBE6F334283547C7000D7460 /* Note+Extension.swift in Sources */,
 				FB380AE8282E660F00CED06B /* SecondOnBoardingView.swift in Sources */,
 				FBBD3683283275E900823C33 /* FileManager+Extensions.swift in Sources */,
 				BD803E84282EB9E600BB1175 /* InsideBookView.swift in Sources */,
 				FBBD36772832750100823C33 /* TakeImageView.swift in Sources */,
+				FBE6F33728354808000D7460 /* NoteDataModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,6 +508,16 @@
 			);
 			currentVersion = BD803E89282F8D7500BB1175 /* BookContainer.xcdatamodel */;
 			path = BookContainer.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		FBE6F33528354808000D7460 /* NoteDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FBE6F33628354808000D7460 /* NoteDataModel.xcdatamodel */,
+			);
+			currentVersion = FBE6F33628354808000D7460 /* NoteDataModel.xcdatamodel */;
+			path = NoteDataModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

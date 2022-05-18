@@ -88,7 +88,7 @@ struct SecondOnBoardingView: View {
             }.frame(width: 385, alignment: .center)
                 .padding(.bottom,100)
             
-            NavigationLink(destination: MainScreenView()){
+            NavigationLink(destination: InsideBookView()){
                 Text("Continue")
             }
             .font(.title2)

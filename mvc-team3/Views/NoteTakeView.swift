@@ -7,15 +7,24 @@
 
 import SwiftUI
 
-
 struct NoteTakeView: View {
-    @State private var noteText :String = ""
+    @Environment(\.presentationMode) var presentationMode
+    @Environment(\.dismiss) var dismiss
+
+    @ObservedObject var vm: TakeNoteViewModel
+    
+    init(vm: TakeNoteViewModel){
+        self.vm = vm
+    }
+    
+    
     var body: some View {
         
-        
+        NavigationView{
         VStack{
             
-            TextEditor(text: $noteText)
+            TextEditor(text: $vm.noteVar)
+        
                 .padding([.leading, .trailing], 4)
                 .frame(width: 350).border(Color.gray)
                 .multilineTextAlignment(.leading)
@@ -23,8 +32,15 @@ struct NoteTakeView: View {
         
         .navigationTitle("Notes")
         .navigationBarTitleDisplayMode(.inline)
-        .navigationBarItems( trailing: Button(action:{
-            print("save")
+        .navigationBarItems(
+            leading: Button(action:{
+                dismiss()
+            }){
+                Text("Cancel")
+            },
+            trailing: Button(action:{
+            vm.save()
+            presentationMode.wrappedValue.dismiss()
             
         })
                              {
@@ -32,12 +48,16 @@ struct NoteTakeView: View {
         }
         )
         
+        }
+        
     }
 }
 
 struct NoteTakeView_Previews: PreviewProvider {
     static var previews: some View {
-        NoteTakeView()
+        let viewContext = NoteCoreManager.shared.persistentStoreContainer.viewContext
+        
+        NoteTakeView(vm: TakeNoteViewModel(context: viewContext))
     }
 }
 

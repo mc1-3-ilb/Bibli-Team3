@@ -10,7 +10,6 @@ struct InsideBookView: View {
     //@EnvironmentObject  var vm: ImageViewModel
 
 
-
     //contoh dulu
     var data: Int = 0
     let items = Array(1...5).map({"\($0) Avatar : The Legend of Aang"})
@@ -18,12 +17,16 @@ struct InsideBookView: View {
     let layout = [
         GridItem(.adaptive(minimum:150))
     ]
+    let viewContext = NoteCoreManager.shared.persistentStoreContainer.viewContext
+
     //------
     
     var body: some View {
             HStack{
-                  NavigationLink(destination: NoteTakeView(), isActive: $navigationLinkNotes) {
+                NavigationLink(destination: NoteListView(vm: NoteListViewModel(context: viewContext)), isActive: $navigationLinkNotes) {
                     EmptyView()
+                    NoteListView(vm: NoteListViewModel(context: viewContext))
+                        .environment(\.managedObjectContext, viewContext)
                 }
                 NavigationLink(destination: TakeImageView()
                                .environmentObject(ImageViewModel())
