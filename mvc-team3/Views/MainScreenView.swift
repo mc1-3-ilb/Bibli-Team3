@@ -12,7 +12,7 @@ struct MainScreenView: View {
     ]
     
     var body: some View {
-        HStack{
+      
             VStack{
                 if(data==0){
                     Text("Tap + to add new book folder")
@@ -41,7 +41,7 @@ struct MainScreenView: View {
                 }
             }
             .searchable(text: $searchText, prompt: "Looking for book folder?")
-        }
+        
         
         .navigationTitle("Book Shelves")
         .foregroundColor(Color("AccentColor"))

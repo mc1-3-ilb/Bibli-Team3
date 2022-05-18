@@ -1,18 +1,11 @@
-//
-//  NoteListView.swift
-//  mvvm-team03
-//
-//  Created by Nadia Ramadhani on 18/05/22.
 
 import SwiftUI
 
 struct NoteListView: View {
-   
     
     @State private var isPresented: Bool = false
     @Environment(\.managedObjectContext) var viewContext
     @ObservedObject private var noteListVM : NoteListViewModel
-    
     
     init(vm: NoteListViewModel) {
         self.noteListVM = vm
@@ -24,38 +17,41 @@ struct NoteListView: View {
         }
     }
     var body: some View {
-      
-        NavigationView{
-        VStack{
-            List {
-                ForEach(noteListVM.notes) { note in
-                    NavigationLink(destination: NoteOpenView()) {
-                        Text(note.noteText)
-                    }
-//                    Text (note.noteText)
-                    
-                }.onDelete(perform: deleteNote)
-                
-            }
-        }
-        .sheet(isPresented: $isPresented, onDismiss: {
-            //dismiss
-        }, content: {
-            NoteTakeView(vm: TakeNoteViewModel(context: viewContext))
-            
-        })
         
-        .navigationTitle("Notes")
-                .toolbar {
-                    ToolbarItem(placement: .navigationBarTrailing) {
-                        Button("Add new note"){
-                            isPresented = true
-                            
+        NavigationView{
+            VStack{
+                List {
+                    ForEach(noteListVM.notes) { note in
+                        NavigationLink(destination: NoteOpenView()) {
+                            Text(note.noteText)
                         }
+                        //                    Text (note.noteText)
+                    }.onDelete(perform: deleteNote)
+                }
+            }
+            .sheet(isPresented: $isPresented, onDismiss: {
+                //dismiss
+            }, content: {
+                NoteTakeView(vm: TakeNoteViewModel(context: viewContext))
+            })
+            
+            .navigationTitle("Notes")
+            .toolbar{
+                ToolbarItemGroup(placement: .bottomBar){
+                    Button{
+                        isPresented = true
+                    } label: {
+                        Label("Add Note", systemImage: "plus.circle.fill")
+                    }
+                    Button{
+                        print("Book")
+                    } label: {
+                        Image(systemName: "plus.square.fill.on.square.fill")
+                        Text("Add Book")
+
                     }
                 }
-            
-            
+            }
         }
     }
 }

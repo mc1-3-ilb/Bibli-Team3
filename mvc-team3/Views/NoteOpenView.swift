@@ -1,9 +1,4 @@
-//
-//  NoteOpenView.swift
-//  mvvm-team03
-//
-//  Created by Nadia Ramadhani on 18/05/22.
-//
+
 
 
 import SwiftUI
@@ -15,8 +10,8 @@ struct NoteOpenView: View {
 
 
 struct NoteOpenView_Previews: PreviewProvider {
-        static var previews: some View {
-            NoteOpenView()
-            
-        }
+    static var previews: some View {
+        NoteOpenView()
+        
     }
+}
