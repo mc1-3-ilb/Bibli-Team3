@@ -20,7 +20,7 @@ struct NoteTakeView: View {
     
     var body: some View {
         
-        NavigationView{
+    
         VStack{
             TextField("Your title here", text: $vm.titleVar)
                 .padding()
@@ -51,8 +51,9 @@ struct NoteTakeView: View {
             Text("Save")
         }
         )
+        .navigationBarBackButtonHidden(true)
         
-        }
+    
         
     }
 }

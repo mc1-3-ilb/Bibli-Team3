@@ -64,41 +64,14 @@ struct InsideBookView: View {
         
         .navigationBarItems(trailing: Button(action: {
             print("back")
-            showingSheet.toggle()
+            
+// FUNGSI EDIT
+            
         }) {
-            Label("Add", systemImage: "plus")
+            Text("Edit")
         }
            
-            .actionSheet(isPresented: $showingSheet) {
-                ActionSheet(
-                    title: Text("Choose notes type"),
-                    buttons: [
-                        .default(Text("New Folder"), action: {print ("tapped")
-                        }),
-                        .default(Text("Notes"), action: {
-
-                            withAnimation{
-                                navigationLinkNotes = true}
-                        }),
-
-                            .default(Text("Voice Notes"), action:
-                                        {
-                                            withAnimation{
-
-                                                navigationLinkImage = true}
-                                        }),
-
-                            .default(Text("Take photo"), action: {print ("tapped")
-                            }),
-
-                            .default(Text("Import Media"), action: {print ("tapped")
-                            }),
-
-                            .cancel()
-                        
-                    ]
-                )
-            }
+           
         )
         
         
