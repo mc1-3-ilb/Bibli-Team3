@@ -1,11 +1,19 @@
+//
+//  ContentView.swift
+//  NoteCoreData
+//
+//  Created by Nadia Ramadhani on 18/05/22.
+//
 
 import SwiftUI
 
 struct NoteListView: View {
+   
     
     @State private var isPresented: Bool = false
     @Environment(\.managedObjectContext) var viewContext
     @ObservedObject private var noteListVM : NoteListViewModel
+    
     
     init(vm: NoteListViewModel) {
         self.noteListVM = vm
@@ -14,37 +22,48 @@ struct NoteListView: View {
         offsets.forEach { index in
             let note = noteListVM.notes[index]
             noteListVM.deleteNote(noteId: note.id)
+        
         }
     }
     var body: some View {
-                    VStack{
-                List {
-                    ForEach(noteListVM.notes) { note in
-                        NavigationLink(destination: NoteOpenView()) {
-                            Text(note.noteText)
+      
+        NavigationView{
+        VStack{
+            List {
+                ForEach(noteListVM.notes) { note in
+                    NavigationLink(destination: NoteOpenView(vm: noteListVM)) {
+                        VStack{
+                        Text(note.noteTitle)
+                        //Text(note.noteText)
+                        
                         }
-                        //                    Text (note.noteText)
-                    }.onDelete(perform: deleteNote)
-                }
+                    }
+//                    Text (note.noteText)
+                    
+                }.onDelete(perform: deleteNote)
+                
             }
-            .sheet(isPresented: $isPresented, onDismiss: {
-                //dismiss
-            }, content: {
-                NoteTakeView(vm: TakeNoteViewModel(context: viewContext))
-            })
+        }
+        .sheet(isPresented: $isPresented, onDismiss: {
+            //dismiss
+        }, content: {
+            NoteTakeView(vm: TakeNoteViewModel(context: viewContext))
             
-            .navigationTitle("Notes")
-            .navigationBarTitleDisplayMode(.inline)
-//            .navigationBarItems(trailing: Button(action: {
-//                print("back")
-//                isPresented = true
-//            }) {
-//                Label("Add", systemImage: "plus")
-//            }
-               
-//    )
-    }
+        })
         
+        .navigationTitle("Notes")
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Button("Add new note"){
+                            isPresented = true
+                            
+                        }
+                    }
+                }
+            
+            
+        }
+    }
 }
 
 struct NoteListView_Previews: PreviewProvider {

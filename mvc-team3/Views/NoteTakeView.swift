@@ -10,17 +10,23 @@ import SwiftUI
 struct NoteTakeView: View {
     @Environment(\.presentationMode) var presentationMode
     @Environment(\.dismiss) var dismiss
-
+@State private var noteTitle = ""
     @ObservedObject var vm: TakeNoteViewModel
     
     init(vm: TakeNoteViewModel){
         self.vm = vm
     }
-   
+    
+    
     var body: some View {
         
         NavigationView{
         VStack{
+            TextField("Your title here", text: $vm.titleVar)
+                .padding()
+                .frame(width: 350, height: 50, alignment: .center)
+                .border(Color.gray)
+            
             TextEditor(text: $vm.noteVar)
         
                 .padding([.leading, .trailing], 4)

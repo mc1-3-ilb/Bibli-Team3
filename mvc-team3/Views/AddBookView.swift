@@ -1,6 +1,5 @@
 import SwiftUI
 
-
 struct AddBookView: View {
     @StateObject var bookvm = BookFolderViewModel()
     @State private var titleBook:String = ""
@@ -45,7 +44,6 @@ struct AddBookView: View {
             dismiss()
         }){
             Text("Save")
-    
             //GIMANA CARA PAS BALIK KE MAIN SCREEN LANGSUNG REFRESH
         }
         )

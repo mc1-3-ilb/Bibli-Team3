@@ -78,6 +78,9 @@ struct NoteViewModel: Identifiable {
         note.noteText ?? ""
         
     }
+    var noteTitle: String {
+        note.noteTitle ?? ""
+    }
 //    var noteTitle: String {
 //        note.noteTitle ?? ""
 //    }

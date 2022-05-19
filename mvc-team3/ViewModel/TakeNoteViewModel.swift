@@ -23,6 +23,7 @@ class TakeNoteViewModel: ObservableObject{
         do{
             let note = NoteEntity(context:  context)
             note.noteText = noteVar
+            note.noteTitle = titleVar
             try note.save()
             
             
@@ -31,4 +32,5 @@ class TakeNoteViewModel: ObservableObject{
             print(error)
         }
     }
+    
 }
