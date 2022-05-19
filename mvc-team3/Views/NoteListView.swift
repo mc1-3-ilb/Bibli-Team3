@@ -34,6 +34,7 @@ struct NoteListView: View {
                     NavigationLink(destination: NoteOpenView(vm: noteListVM)) {
                         VStack{
                         Text(note.noteTitle)
+                            
                         //Text(note.noteText)
                         
                         }
@@ -52,14 +53,14 @@ struct NoteListView: View {
         })
         
         .navigationTitle("Notes")
-                .toolbar {
-                    ToolbarItem(placement: .navigationBarTrailing) {
-                        Button("Add new note"){
-                            isPresented = true
-                            
-                        }
-                    }
-                }
+//                .toolbar {
+//                    ToolbarItem(placement: .navigationBarTrailing) {
+//                        Button("Add new note"){
+//                            isPresented = true
+//
+//                        }
+//                    }
+//                }
             
             
         }

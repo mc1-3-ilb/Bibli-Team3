@@ -30,12 +30,15 @@ struct InsideBookView: View {
                 
             } else {
                 HStack{
+
+                    NoteListView(vm: NoteListViewModel(context: viewContext))
+                        .environment(\.managedObjectContext, viewContext)
                     
-                    NavigationLink(destination: NoteListView(vm: NoteListViewModel(context: viewContext)), isActive: $navigationLinkNotes) {
-                        EmptyView()
-                        NoteListView(vm: NoteListViewModel(context: viewContext))
-                            .environment(\.managedObjectContext, viewContext)
-                    }
+//                    NavigationLink(destination: NoteListView(vm: NoteListViewModel(context: viewContext)), isActive: $navigationLinkNotes) {
+//                        EmptyView()
+//                        NoteListView(vm: NoteListViewModel(context: viewContext))
+//                            .environment(\.managedObjectContext, viewContext)
+//                    }
                     NavigationLink(destination: TakeImageView()
                         .environmentObject(ImageViewModel())
                         .onAppear {
