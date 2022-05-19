@@ -34,6 +34,7 @@
 		FBE6F33B2835488C000D7460 /* TakeNoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE6F33A2835488C000D7460 /* TakeNoteViewModel.swift */; };
 		FBE6F33D28354968000D7460 /* NoteListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE6F33C28354968000D7460 /* NoteListView.swift */; };
 		FBE6F33F28354986000D7460 /* NoteOpenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE6F33E28354986000D7460 /* NoteOpenView.swift */; };
+		FBFC220D28362083000B6E08 /* ActionSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFC220C28362083000B6E08 /* ActionSheetView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		FBE6F33A2835488C000D7460 /* TakeNoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeNoteViewModel.swift; sourceTree = "<group>"; };
 		FBE6F33C28354968000D7460 /* NoteListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListView.swift; sourceTree = "<group>"; };
 		FBE6F33E28354986000D7460 /* NoteOpenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteOpenView.swift; sourceTree = "<group>"; };
+		FBFC220C28362083000B6E08 /* ActionSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheetView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 				FBB74E54282CF0B3003D9B1F /* Launch Screen.storyboard */,
 				FB380AE5282E593700CED06B /* FirstOnBoardingView.swift */,
 				FB380AE7282E660F00CED06B /* SecondOnBoardingView.swift */,
+				FBFC220C28362083000B6E08 /* ActionSheetView.swift */,
 				FBC64015283000DF00685A32 /* NoteTakeView.swift */,
 				FBBD36762832750100823C33 /* TakeImageView.swift */,
 				FBE6F33C28354968000D7460 /* NoteListView.swift */,
@@ -277,6 +280,7 @@
 				AA0E8596282BCB7000316C03 /* mvc_team3App.swift in Sources */,
 				FBBD3680283275B000823C33 /* ZoomableScrollvIEW.swift in Sources */,
 				FBB74E50282CE417003D9B1F /* MainScreenView.swift in Sources */,
+				FBFC220D28362083000B6E08 /* ActionSheetView.swift in Sources */,
 				FBBD367E2832759100823C33 /* ImagePickerVC.swift in Sources */,
 				FB380AE6282E593700CED06B /* FirstOnBoardingView.swift in Sources */,
 				FBBD36792832752000823C33 /* ImageViewModel.swift in Sources */,

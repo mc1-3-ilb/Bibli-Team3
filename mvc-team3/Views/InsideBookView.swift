@@ -24,19 +24,13 @@ struct InsideBookView: View {
     var body: some View {
         VStack{
             if data == 0{
-                VStack{
-                    if(data==0){
-                        Text("Tap + to add new note")
-                            .foregroundColor(Color(UIColor.black))
-                        
-                    }
-                    else{
-                        //list note
-                    }
-                }
+                Text("Tap + to add new note")
+                    .foregroundColor(Color(UIColor.black))
+                
                 
             } else {
                 HStack{
+                    
                     NavigationLink(destination: NoteListView(vm: NoteListViewModel(context: viewContext)), isActive: $navigationLinkNotes) {
                         EmptyView()
                         NoteListView(vm: NoteListViewModel(context: viewContext))
@@ -46,8 +40,7 @@ struct InsideBookView: View {
                         .environmentObject(ImageViewModel())
                         .onAppear {
                             UserDefaults.standard.setValue(false, forKey: "_UIConstraintBasedLayoutLogUnsatisfiable")
-                        }
-                                   ,
+                        },
                                    isActive: $navigationLinkImage) {
                         EmptyView()
                     }
@@ -72,43 +65,44 @@ struct InsideBookView: View {
         }) {
             Label("Add", systemImage: "plus")
         }
+           
             .actionSheet(isPresented: $showingSheet) {
                 ActionSheet(
                     title: Text("Choose notes type"),
                     buttons: [
+                        .default(Text("New Folder"), action: {print ("tapped")
+                        }),
                         .default(Text("Notes"), action: {
-                            
+
                             withAnimation{
                                 navigationLinkNotes = true}
                         }),
-                        
+
                             .default(Text("Voice Notes"), action:
                                         {
                                             withAnimation{
-                                                
+
                                                 navigationLinkImage = true}
                                         }),
-                        
-                        
+
                             .default(Text("Take photo"), action: {print ("tapped")
                             }),
-                        
-                            .default(Text("Import photo"), action: {print ("tapped")
+
+                            .default(Text("Import Media"), action: {print ("tapped")
                             }),
-                        
+
                             .cancel()
                         
                     ]
                 )
-                
-                
-                
             }
         )
         
         
     }
 }
+
+
 
 struct InsideBookView_Preview: PreviewProvider {
     static var previews: some View {

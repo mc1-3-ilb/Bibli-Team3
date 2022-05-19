@@ -17,9 +17,7 @@ struct NoteListView: View {
         }
     }
     var body: some View {
-        
-        NavigationView{
-            VStack{
+                    VStack{
                 List {
                     ForEach(noteListVM.notes) { note in
                         NavigationLink(destination: NoteOpenView()) {
@@ -36,24 +34,17 @@ struct NoteListView: View {
             })
             
             .navigationTitle("Notes")
-            .toolbar{
-                ToolbarItemGroup(placement: .bottomBar){
-                    Button{
-                        isPresented = true
-                    } label: {
-                        Label("Add Note", systemImage: "plus.circle.fill")
-                    }
-                    Button{
-                        print("Book")
-                    } label: {
-                        Image(systemName: "plus.square.fill.on.square.fill")
-                        Text("Add Book")
-
-                    }
-                }
-            }
-        }
+            .navigationBarTitleDisplayMode(.inline)
+//            .navigationBarItems(trailing: Button(action: {
+//                print("back")
+//                isPresented = true
+//            }) {
+//                Label("Add", systemImage: "plus")
+//            }
+               
+//    )
     }
+        
 }
 
 struct NoteListView_Previews: PreviewProvider {

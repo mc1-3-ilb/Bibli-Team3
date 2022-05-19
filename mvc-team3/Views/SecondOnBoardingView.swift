@@ -3,8 +3,7 @@
 import SwiftUI
 
 struct SecondOnBoardingView: View {
-    
-    
+ 
     var body: some View {
         
         VStack{
@@ -87,8 +86,7 @@ struct SecondOnBoardingView: View {
                 
             }.frame(width: 385, alignment: .center)
                 .padding(.bottom,100)
-            
-            NavigationLink(destination: InsideBookView()){
+            NavigationLink(destination: MainScreenView()){
                 Text("Continue")
             }
             .font(.title2)

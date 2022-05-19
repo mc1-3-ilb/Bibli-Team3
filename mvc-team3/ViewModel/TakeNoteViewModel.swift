@@ -10,6 +10,7 @@ import CoreData
 class TakeNoteViewModel: ObservableObject{
     
     @Published var noteVar: String = ""
+    @Published var titleVar: String = ""
     
     var context: NSManagedObjectContext
     

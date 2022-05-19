@@ -16,13 +16,11 @@ struct NoteTakeView: View {
     init(vm: TakeNoteViewModel){
         self.vm = vm
     }
-    
-    
+   
     var body: some View {
         
         NavigationView{
         VStack{
-            
             TextEditor(text: $vm.noteVar)
         
                 .padding([.leading, .trailing], 4)
