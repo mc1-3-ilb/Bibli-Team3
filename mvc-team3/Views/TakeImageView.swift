@@ -49,6 +49,7 @@ struct TakeImageView: View {
                 Text(cameraError.message)
             })
             .navigationTitle("My Images")
+            .navigationBarTitleDisplayMode(.inline)
         }
     }
 }
