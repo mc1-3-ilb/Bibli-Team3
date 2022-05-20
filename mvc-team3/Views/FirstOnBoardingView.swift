@@ -1,11 +1,8 @@
-
 import SwiftUI
 
 struct FirstOnBoardingView: View {
     
-    
     var body: some View {
-        
         
         NavigationView {
             VStack{
@@ -27,8 +24,7 @@ struct FirstOnBoardingView: View {
                     .padding(.vertical)
                 
                 NavigationLink(destination: SecondOnBoardingView()){
-                    Text("Start")
-                    
+                    Text("Get Started")
                 }
                 .font(.title2)
                 .frame(width: 250, height: 25, alignment: .center)

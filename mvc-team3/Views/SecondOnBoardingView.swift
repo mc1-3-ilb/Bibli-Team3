@@ -1,5 +1,3 @@
-
-
 import SwiftUI
 
 struct SecondOnBoardingView: View {
@@ -13,7 +11,6 @@ struct SecondOnBoardingView: View {
                 .multilineTextAlignment(.center)
                 .foregroundColor(Color("AccentColor"))
                 .padding(.top,100)
-            
             
             HStack{
                 Image ("bookSmall")
@@ -32,18 +29,15 @@ struct SecondOnBoardingView: View {
                         .foregroundColor(Color("grayPalette"))
                         .frame(width: 285,alignment: .leading)
                         .padding(.trailing,15)
-                    
                 }
-                
             }.frame(width: 385, alignment: .center)
-                .padding(.top,90)
+             .padding(.top,80)
             
             HStack{
                 Image ("phoneSmall")
                     .padding()
                     .frame(width:75, alignment: .center)
-                
-                
+            
                 VStack{
                     Text ("Discover Various File Types")
                         .font(.body)
@@ -56,13 +50,8 @@ struct SecondOnBoardingView: View {
                         .foregroundColor(Color("grayPalette"))
                         .frame(width: 285,alignment: .leading)
                         .padding(.trailing,15)
-                    
-                    
-                    
                 }
-                
             }.frame(width: 385, alignment: .center)
-            
             
             HStack{
                 Image ("penSmall")
@@ -81,11 +70,10 @@ struct SecondOnBoardingView: View {
                         .foregroundColor(Color("grayPalette"))
                         .frame(width: 280,alignment: .leading)
                         .padding(.trailing,15)
-                    
                 }
-                
             }.frame(width: 385, alignment: .center)
-                .padding(.bottom,100)
+             .padding(.bottom,100)
+            
             NavigationLink(destination: MainScreenView()){
                 Text("Continue")
             }
@@ -95,12 +83,12 @@ struct SecondOnBoardingView: View {
             .foregroundColor(.white)
             .background(Color("AccentColor"))
             .cornerRadius(10)
-            .padding(.bottom,200)
+            .padding(.bottom,180)
         
         }
     }
     
-    struct SecondOnBoardingView_Preview: PreviewProvider {
+struct SecondOnBoardingView_Preview: PreviewProvider {
         static var previews: some View {
             SecondOnBoardingView()
         }

@@ -10,17 +10,15 @@ import SwiftUI
 struct NoteTakeView: View {
     @Environment(\.presentationMode) var presentationMode
     @Environment(\.dismiss) var dismiss
-@State private var noteTitle = ""
+    @State private var noteTitle = ""
     @ObservedObject var vm: TakeNoteViewModel
     
     init(vm: TakeNoteViewModel){
         self.vm = vm
     }
     
-    
     var body: some View {
-        
-    
+
         VStack{
             TextField("Your title here", text: $vm.titleVar)
                 .padding()
@@ -28,13 +26,11 @@ struct NoteTakeView: View {
                 .border(Color.gray)
             
             TextEditor(text: $vm.noteVar)
-        
                 .padding([.leading, .trailing], 4)
                 .frame(width: 350).border(Color.gray)
                 .multilineTextAlignment(.leading)
         }
-        
-        .navigationTitle("Notes")
+        .navigationTitle("Text Note")
         .navigationBarTitleDisplayMode(.inline)
         .navigationBarItems(
             leading: Button(action:{
@@ -45,15 +41,12 @@ struct NoteTakeView: View {
             trailing: Button(action:{
             vm.save()
             presentationMode.wrappedValue.dismiss()
-            
         })
-                             {
+        {
             Text("Save")
         }
         )
         .navigationBarBackButtonHidden(true)
-        
-    
         
     }
 }
