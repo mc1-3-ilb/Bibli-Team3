@@ -24,14 +24,19 @@ struct NoteTakeView: View {
         VStack{
             TextField("Your title here", text: $vm.titleVar)
                 .padding()
-                .frame(width: 350, height: 50, alignment: .center)
+                .frame(width: 350, height: 50, alignment: .leading)
                 .border(Color.gray)
+                .font(.title2)
+                .disableAutocorrection(true)
+            
             
             TextEditor(text: $vm.noteVar)
         
                 .padding([.leading, .trailing], 4)
                 .frame(width: 350).border(Color.gray)
                 .multilineTextAlignment(.leading)
+                
+                .disableAutocorrection(true)
         }
         
         .navigationTitle("Notes")

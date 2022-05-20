@@ -16,25 +16,38 @@ struct NoteOpenView: View {
     }
     var data: Int = 1
     var body: some View {
-                    VStack {
-    
-        if (data == 0) {
-            Text("good")
-        } else {
-            let note = noteVM
-            VStack{
-            Section{
-            Text(note.noteTitle)
-                    .padding()
+        VStack {
+            
+            if (data == 0) {
+                Text("good")
+            } else {
+                let note = noteVM
+                VStack{
+                    List{
+                        
+                            Text(note.noteTitle)
+                                .bold()
+                                .padding(.horizontal)
+                                .frame( alignment: .leading)
+                                .border(.background)
+                        
+                            Text(note.noteText)
+                                .padding()
+                                .frame( alignment: .leading)
+                        
+                       
+                        
+                    }
+                    Spacer()
+                }.navigationBarItems(
+                    trailing:
+                        Button("Edit") {
+                            print("Edited")
+                        }
+                )
                 
-                
-            Text(note.noteText)
-                    .padding()
-                
-            }
             }
         }
-                    }
-                }
-
+    }
+    
 }

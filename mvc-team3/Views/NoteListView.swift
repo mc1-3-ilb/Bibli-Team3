@@ -30,19 +30,7 @@ struct NoteListView: View {
         }
         
     }
-//    func dateFormatter(date: Date) -> String {
-//
-//
-//
-////        let date = noteListVM.notes.noteDate
-//
-//        let dateFormatter = DateFormatter()
-//    //    let notes = noteListVM.notes
-//        dateFormatter.dateFormat = "dd MMM YYYY"
-//
-//            return dateFormatter.string(from: date)
-//
-//    }
+
     var body: some View {
         
         
@@ -61,20 +49,30 @@ struct NoteListView: View {
             List {
                 ForEach(noteListVM.notes) { note in
                     NavigationLink(destination: NoteOpenView(vm: note)) {
-                        VStack{
-                            Text(note.noteTitle)
-                                .multilineTextAlignment(.leading)
+                        
+                        
+                        HStack {
+                            Image(systemName: "note.text")
+                                .frame(alignment: .leading)
+                                .padding()
                             
-                            Text(dateFormatter(date:note.noteDate))
-                                .foregroundColor(.gray)
-                                .italic()
-                            
-                            
-                          
-                            
+                            VStack{
+                              
+                                Text(note.noteTitle)
+                                    .frame( alignment: .leading)
+                                
+                                
+                                Text(dateFormatter(date:note.noteDate))
+                                    .foregroundColor(.gray)
+                                    .italic()
+                                    .frame( alignment: .leading)
+                                
+                                
+                              
+                                
+                            }
                         }
                     }
-                    //                    Text (note.noteText)
                     
                 }.onDelete(perform: deleteNote)
                 
@@ -96,6 +94,7 @@ struct NoteListView: View {
                 }, label: {
                     Image(systemName: "plus.circle.fill")
                     Text("New item")
+                    
                 })          .actionSheet(isPresented: $showSheet) {
                     ActionSheet(
                         title: Text("Choose notes type"),

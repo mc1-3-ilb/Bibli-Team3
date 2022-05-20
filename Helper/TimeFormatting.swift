@@ -11,7 +11,7 @@ import Foundation
 func dateFormatter(date: Date) -> String {
   
     let dateFormatter = DateFormatter()
-    dateFormatter.dateFormat = "dd MMM YYYY hh:mm:ss"
+    dateFormatter.dateFormat = "dd MMM YYYY"
     
         return dateFormatter.string(from: date)
      
