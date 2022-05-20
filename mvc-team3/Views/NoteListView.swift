@@ -28,7 +28,21 @@ struct NoteListView: View {
             noteListVM.deleteNote(noteId: note.id)
             
         }
+        
     }
+//    func dateFormatter(date: Date) -> String {
+//
+//
+//
+////        let date = noteListVM.notes.noteDate
+//
+//        let dateFormatter = DateFormatter()
+//    //    let notes = noteListVM.notes
+//        dateFormatter.dateFormat = "dd MMM YYYY"
+//
+//            return dateFormatter.string(from: date)
+//
+//    }
     var body: some View {
         
         
@@ -46,15 +60,17 @@ struct NoteListView: View {
         VStack{
             List {
                 ForEach(noteListVM.notes) { note in
-                    NavigationLink(destination: NoteOpenView(vm: noteListVM)) {
+                    NavigationLink(destination: NoteOpenView(vm: note)) {
                         VStack{
                             Text(note.noteTitle)
-                            Text(noteTime(date:note.noteDate))
+                                .multilineTextAlignment(.leading)
+                            
+                            Text(dateFormatter(date:note.noteDate))
                                 .foregroundColor(.gray)
                                 .italic()
                             
                             
-                            //Text(note.noteText)
+                          
                             
                         }
                     }
@@ -118,6 +134,8 @@ struct NoteListView: View {
         
         
     }
+   
+
 }
 
 struct NoteListView_Previews: PreviewProvider {

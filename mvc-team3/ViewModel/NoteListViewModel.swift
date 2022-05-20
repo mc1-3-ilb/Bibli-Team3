@@ -63,7 +63,7 @@ extension NoteListViewModel: NSFetchedResultsControllerDelegate {
   
 }
 
-struct NoteViewModel: Identifiable {
+class NoteViewModel: Identifiable, ObservableObject {
     
     private var note: NoteEntity
     
