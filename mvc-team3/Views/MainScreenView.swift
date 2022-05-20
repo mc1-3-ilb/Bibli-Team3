@@ -30,8 +30,7 @@ struct MainScreenView: View {
                            isActive: $navigationLinkImage) {
                 EmptyView()
             }
-            
-            
+        
         }
             VStack{
                 if(data==0){

@@ -49,6 +49,10 @@ struct NoteListView: View {
                     NavigationLink(destination: NoteOpenView(vm: noteListVM)) {
                         VStack{
                             Text(note.noteTitle)
+                            Text(noteTime(date:note.noteDate))
+                                .foregroundColor(.gray)
+                                .italic()
+                            
                             
                             //Text(note.noteText)
                             

@@ -16,6 +16,7 @@
 		BD803E9128300B7000BB1175 /* BookFolderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD803E9028300B7000BB1175 /* BookFolderViewModel.swift */; };
 		FB380AE6282E593700CED06B /* FirstOnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB380AE5282E593700CED06B /* FirstOnBoardingView.swift */; };
 		FB380AE8282E660F00CED06B /* SecondOnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB380AE7282E660F00CED06B /* SecondOnBoardingView.swift */; };
+		FB9289F728372C7500B7C383 /* TimeFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9289F628372C7500B7C383 /* TimeFormatting.swift */; };
 		FBB74E50282CE417003D9B1F /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB74E4F282CE417003D9B1F /* MainScreenView.swift */; };
 		FBB74E52282CE55E003D9B1F /* AddBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB74E51282CE55E003D9B1F /* AddBookView.swift */; };
 		FBB74E55282CF0B3003D9B1F /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBB74E54282CF0B3003D9B1F /* Launch Screen.storyboard */; };
@@ -48,6 +49,7 @@
 		BD803E9028300B7000BB1175 /* BookFolderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookFolderViewModel.swift; sourceTree = "<group>"; };
 		FB380AE5282E593700CED06B /* FirstOnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstOnBoardingView.swift; sourceTree = "<group>"; };
 		FB380AE7282E660F00CED06B /* SecondOnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondOnBoardingView.swift; sourceTree = "<group>"; };
+		FB9289F628372C7500B7C383 /* TimeFormatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFormatting.swift; sourceTree = "<group>"; };
 		FBB74E4F282CE417003D9B1F /* MainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
 		FBB74E51282CE55E003D9B1F /* AddBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookView.swift; sourceTree = "<group>"; };
 		FBB74E53282CE6B2003D9B1F /* mvvm-team03-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "mvvm-team03-Info.plist"; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 		AA0E8589282BCB7000316C03 = {
 			isa = PBXGroup;
 			children = (
+				FB9289F528372C6500B7C383 /* Helper */,
 				FBE6F3302835477A000D7460 /* Core Data Manager */,
 				FBE6F32D28354725000D7460 /* BaseModel */,
 				FBBD3681283275D000823C33 /* Extensions */,
@@ -145,6 +148,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		FB9289F528372C6500B7C383 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				FB9289F628372C7500B7C383 /* TimeFormatting.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		FBB74E4E282CE3F6003D9B1F /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -166,6 +177,7 @@
 		FBBD367C2832756F00823C33 /* UIViewRepresentable */ = {
 			isa = PBXGroup;
 			children = (
+				FBE6F333283547C7000D7460 /* Note+Extension.swift */,
 				FBBD367D2832759100823C33 /* ImagePickerVC.swift */,
 				FBBD367F283275B000823C33 /* ZoomableScrollvIEW.swift */,
 			);
@@ -176,7 +188,6 @@
 			isa = PBXGroup;
 			children = (
 				FBBD3682283275E900823C33 /* FileManager+Extensions.swift */,
-				FBE6F333283547C7000D7460 /* Note+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -275,6 +286,7 @@
 				FBBD367B2832754600823C33 /* PickerImage.swift in Sources */,
 				AA0E8598282BCB7000316C03 /* ContentView.swift in Sources */,
 				FBC64016283000DF00685A32 /* NoteTakeView.swift in Sources */,
+				FB9289F728372C7500B7C383 /* TimeFormatting.swift in Sources */,
 				FBE6F33928354859000D7460 /* NoteListViewModel.swift in Sources */,
 				FBE6F33F28354986000D7460 /* NoteOpenView.swift in Sources */,
 				AA0E8596282BCB7000316C03 /* mvc_team3App.swift in Sources */,

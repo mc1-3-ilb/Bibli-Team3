@@ -24,7 +24,9 @@ class TakeNoteViewModel: ObservableObject{
             let note = NoteEntity(context:  context)
             note.noteText = noteVar
             note.noteTitle = titleVar
+            note.noteDate = Date()
             try note.save()
+            
             
             
    
